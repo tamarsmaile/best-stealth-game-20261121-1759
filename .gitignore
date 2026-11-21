@@ -1,0 +1,8 @@
+# Kit, transcripts and local build output never belong in the repo.
+best-stealth-game-20261121-1759-kit/
+*-kit/
+muse-usage*.jsonl
+transcripts.tar.gz
+out/
+node_modules/
+.DS_Store

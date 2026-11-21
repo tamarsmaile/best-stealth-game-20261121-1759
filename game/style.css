@@ -1,0 +1,166 @@
+/* Night Shift: The Quiet Vault — page chrome around the canvas. */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0b0e1a;
+  color: #dfe6f3;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+#wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 16px 20px;
+}
+
+#topbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#game-title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #ffd166;
+  white-space: nowrap;
+}
+
+#game-title span {
+  color: #8ea2c9;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+#hud {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.hud-item {
+  background: #171d33;
+  border: 1px solid #2b3554;
+  border-radius: 6px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+#eye {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+#eye-icon { font-size: 18px; color: #7ee081; }
+
+#eye-bar {
+  display: inline-block;
+  width: 130px;
+  height: 10px;
+  background: #171d33;
+  border: 1px solid #2b3554;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#eye-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #7ee081;
+  transition: width 0.12s linear;
+}
+
+#eye-label { font-weight: 700; letter-spacing: 1px; color: #7ee081; }
+
+#stage { position: relative; }
+
+#game {
+  display: block;
+  width: 960px;
+  max-width: 100%;
+  height: auto;
+  background: #10142a;
+  border: 1px solid #2b3554;
+  border-radius: 8px;
+  cursor: crosshair;
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(8, 10, 22, 0.82);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#overlay.hidden { display: none; }
+
+#ov-title {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 6px;
+  color: #ffd166;
+}
+
+#ov-sub {
+  margin: 4px 0 14px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #8ea2c9;
+  text-transform: uppercase;
+}
+
+#ov-body {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #dfe6f3;
+  margin-bottom: 18px;
+}
+
+#ov-button {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #10142a;
+  background: #ffd166;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+}
+
+#ov-button:hover { background: #ffdd8a; }
+
+#ov-hint {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #8ea2c9;
+}
+
+#bottombar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #8ea2c9;
+}
